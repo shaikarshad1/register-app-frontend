@@ -1,0 +1,23 @@
+
+
+<div class="bootstrap-wrapper">
+<div class="container">
+    <h2>User Details</h2>
+    User Name : {{user.userName}} <br>
+    Fisrt Name : {{user.firstName}} <br>
+    Last Name : {{user.lastName}} <br>
+    Email : {{user.email}} <br>
+    Role : {{user.role}} <br>
+    <div>
+        <button class="btn btn-primary" routerLink="/allusers">All Users</button> &nbsp;
+        
+            <button  *ngIf=toggleedit class="btn btn-secondary" (click)="singleedit(user.userName)">Edit</button>&nbsp;
+            <button routerLink="/dashboard" class="btn btn-primary">dashboard</button>
+       
+    </div>
+
+    
+</div>
+
+</div>
+

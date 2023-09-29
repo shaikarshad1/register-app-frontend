@@ -1,0 +1,36 @@
+.full-width{
+    width:100%;
+}
+.text-danger{
+     color: red;
+}
+
+button:disabled {
+    background-color: rgb(42, 62, 59);
+ }
+
+  
+  
+   td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  
+ 
+  
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    
+   
+  }
+.text-center{
+    text-align: center;
+}
+
+.red{
+  color: red;
+ 
+}

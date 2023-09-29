@@ -1,0 +1,12 @@
+<div class="bootstrap-wrapper">
+<div class="container">
+    <br>
+    <h2>Welcome {{fname }}, {{lname}}</h2>
+<button routerLink="/allusers" class="btn btn-primary">All Users</button> &nbsp;
+<button *ngIf=isadmin routerLink="/adduser" class="btn btn-dark">Add Admin</button>&nbsp;
+<button *ngIf=!isadmin routerLink="/adduser" class="btn btn-info">Add User</button>&nbsp;
+<button  class="btn btn-danger" (click)="rmvitem()" routerLink="/">Log out</button>&nbsp;
+<button  class="btn btn-success" (click)="profile()" routerLink="/user">Profile</button>
+</div>
+
+</div>

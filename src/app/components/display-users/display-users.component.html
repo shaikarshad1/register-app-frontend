@@ -1,0 +1,36 @@
+<h1 class="text-center mt">Users</h1>
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <div class="row">
+<table id="users">
+    
+    <thead>
+        <tr>
+            <th>User Name</th>                                                    
+            <th>First Name</th>
+            <th>In Detail</th>
+           <th *ngIf=togglebutton>Actions</th>
+             </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userlist">
+            <td>{{user.userName}}</td>
+            <td>{{user.firstName}}</td>
+            <td><button type="button" class="btn btn-link"  (click)="indetailuser(user.userName)">View more</button></td>
+            <td *ngIf=togglebutton>
+                <button type="button" class="btn btn-primary" (click)="updateUser(user.userName)">Update</button>
+                &nbsp;
+                <button  class="btn btn-danger" (click)="deleteuser(user.userName)">Delete</button>
+            </td>
+                       
+        </tr>  
+  </tbody>
+</table>
+<h3 class="text-center red">{{noDataDisplay}}</h3>
+
+</div> 
+
+</div>
+</div>
+<button routerLink="/dashboard" class="btn btn-primary">dashboard</button>
+

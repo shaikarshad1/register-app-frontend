@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center" >Add User</h1>
+                <form (ngSubmit)="adduser()">
+                    
+                    <div class="form-outline mb-4">
+                        <input type="text" id="name" class="form-control" name="name" [(ngModel)]="user.userName" #name="ngModel" required />
+                        <label class="form-label" for="name">User Name</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="firstname" class="form-control" name="firstname" #firstname="ngModel" [(ngModel)]="user.firstName" required />
+                        <label class="form-label" for="firstname">First Name</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="lastname" class="form-control" #lastname="ngModel" name="lastname" [(ngModel)]="user.lastName" required/>
+                        <label class="form-label" for="lastname">Last Name</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required />
+                        <label class="form-label" for="email">Email address</label>
+                    </div>
+
+                    
+                    <div class="form-outline mb-4">
+                        <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" required class="form-control" />
+                        <label class="form-label" for="password">Password</label>
+                    </div>
+
+                   
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Add</button>
+
+                    <button routerLink="/dashboard" class="btn btn-secondary btn-block">Home</button>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
